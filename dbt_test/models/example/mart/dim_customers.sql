@@ -21,6 +21,7 @@ with customers as (
         cus_orders.most_recent_order,
         coalesce(cus_orders.tot_orders, 0) as tot_orders,
         date_diff(cus_orders.most_recent_order, cus_orders.first_order, DAY) as days_btw_next_pur
+       
     from customers 
     left join cus_orders using (cus_id)
 )

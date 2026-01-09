@@ -1,0 +1,1 @@
+This repository contains all file, queries and note documented during my DBT learning process. it also includes environment setup files and necessary configurations to get you started on your dbt journey
