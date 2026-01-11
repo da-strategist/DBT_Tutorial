@@ -7,4 +7,4 @@ select
             order_date,
             status,
             _etl_loaded_at as load_time
-    from dbt-tutorial.jaffle_shop.orders
+    from {{source('jaffle-shop-source', 'orders')}}

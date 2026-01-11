@@ -6,5 +6,6 @@ select
     paymentmethod as payment_method,
     status as payment_status,
     amount/100 as amount,
-    created as created_at 
+    created as created_at, 
+    _batched_at as loaded_at
 from dbt-tutorial.stripe.payment
