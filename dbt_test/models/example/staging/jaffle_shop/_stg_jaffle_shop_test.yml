@@ -1,0 +1,27 @@
+models:
+  - name: stg_cus_orders
+    columns:
+      - name: cus_id
+        data_tests:
+          - unique
+          - not_null
+  - name: stg_customers
+    description: 'this model houses aggregated data for customers'
+    columns:
+      - name: cus_id
+        data_tests:
+          - unique
+          - not_null
+  - name: stg_orders
+    description: this model houses agrregated order data for the period in review
+    columns:
+      - name: order_id
+        data_tests:
+          - unique
+          - not_null
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['placed', 'shipped', 'completed', 'returned', 'returned_pending']
+
