@@ -23,5 +23,11 @@ models:
         data_tests:
           - accepted_values:
               arguments:
-                values: ['placed', 'shipped', 'completed', 'returned', 'returned_pending']
+                values: ['placed', 'shipped', 'completed', 'returned', 'return_pending']
+      - name: cus_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: cus_id
 
