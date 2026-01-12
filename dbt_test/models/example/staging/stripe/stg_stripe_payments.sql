@@ -8,4 +8,4 @@ select
     amount/100 as amount,
     created as created_at, 
     _batched_at as loaded_at
-from dbt-tutorial.stripe.payment
+from {{source ('stripe-source', 'payment')}}
