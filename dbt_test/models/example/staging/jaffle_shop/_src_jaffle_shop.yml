@@ -1,10 +1,13 @@
 sources:
   - name: jaffle-shop-source
+    description: this is a clone of a postgres database
     database: dbt-tutorial
     schema: jaffle_shop
     tables:
       - name: customers
+        description: This contains data/information from the raw table relating to customers
       - name: orders
+        description: This contains information from the raw orders table about orders placed 
         config:
           freshness:
             warn_after: 
