@@ -1,9 +1,11 @@
 sources:
   - name: stripe-source
+    description: this is a cloned data from our postgres/data warehouse
     database: dbt-tutorial
     schema: stripe
     tables:
       - name: payment
+        description: this table contains information about transactions and payments made
         config:
           freshness: 
             warn_after:

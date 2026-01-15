@@ -1,21 +1,25 @@
 models:
   - name: stg_cus_orders
+    description: Staged orders data from our jaffle shop app
     columns:
       - name: cus_id
+        description: This is a foreign key that serves as a unique identifier for each customer
         data_tests:
           - unique
           - not_null
   - name: stg_customers
-    description: 'this model houses aggregated data for customers'
+    description: Staged customer data from our jaffle shop app
     columns:
       - name: cus_id
+        description: this is a primary key that uniquely identifies each customer
         data_tests:
           - unique
           - not_null
   - name: stg_orders
-    description: this model houses agrregated order data for the period in review
+    description: this staging model houses agrregated order data for the period in review
     columns:
       - name: order_id
+        description: primary key for orders
         data_tests:
           - unique
           - not_null
@@ -25,6 +29,7 @@ models:
               arguments:
                 values: ['placed', 'shipped', 'completed', 'returned', 'return_pending']
       - name: cus_id
+        description: This is a foreign key that serves as a unique identifier for each customer
         data_tests:
           - relationships:
               arguments:
